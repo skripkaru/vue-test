@@ -1,9 +1,11 @@
-import Button from "@/components/UI/Button";
-import Input from "@/components/UI/Input";
-import Dialog from "@/components/UI/Dialog";
+import CustomButton from "@/components/UI/CustomButton";
+import CustomInput from "@/components/UI/CustomInput";
+import CustomSelect from "@/components/UI/CustomSelect";
+import CustomDialog from "@/components/UI/CustomDialog";
 
 export default [
-  Button,
-  Input,
-  Dialog,
+  CustomButton,
+  CustomInput,
+  CustomSelect,
+  CustomDialog,
 ]

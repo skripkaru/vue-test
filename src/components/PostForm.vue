@@ -1,26 +1,26 @@
 <template>
   <form class="form" @submit.prevent>
-    <h4 style="margin-top: 0">Create post</h4>
-    <Input
+    <h4 class="form-title">Create post</h4>
+    <custom-input
       class="form-input"
       type="text"
       placeholder="Title"
       v-model="post.title"
     />
-    <Input
+    <custom-input
       class="form-input"
       type="text"
       placeholder="Body"
       v-model="post.body"
     />
-    <Button class="form-btn" @click="createPost">Create</Button>
+    <custom-button class="form-btn" @click="createPost">Create</custom-button>
   </form>
 </template>
 
 <script>
 
 export default {
-  name: "PostForm",
+  name: "post-form",
   data() {
     return {
       post: {
@@ -38,7 +38,7 @@ export default {
         body: '',
       }
     },
-  }
+  },
 }
 </script>
 
@@ -48,6 +48,10 @@ export default {
   flex-direction: column;
   max-width: 350px;
   margin: 0 auto;
+}
+
+.form-title {
+  margin: 0 0 1rem;
 }
 
 .form-input:not(:last-child) {

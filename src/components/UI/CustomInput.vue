@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "Input",
+  name: "custom-input",
   props: {
     modelValue: [String, Number],
   },

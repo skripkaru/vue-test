@@ -4,6 +4,7 @@
     class="app-search"
     placeholder="Search"
     v-model="searchQuery"
+    v-focus
   />
   <div class="app-btns">
     <custom-button @click="showDialog">Create post</custom-button>
@@ -17,7 +18,7 @@
   </custom-dialog>
   <post-list v-if="!isPostsLoading" :posts="sortedAndSearchedPosts" @remove="removePost"/>
   <h2 v-else>Loading</h2>
-  <div ref="observer"></div>
+  <div class="observer" v-intersection="loadMorePosts"></div>
 <!--  <div class="page-wrapper">-->
 <!--    <div-->
 <!--      class="page"-->
@@ -109,21 +110,6 @@ export default {
   },
   mounted() {
     this.fetchPosts()
-
-    const options = {
-      root: document.querySelector('#scrollArea'),
-      rootMargin: '0px',
-      threshold: 1.0
-    }
-
-    const callback = (entries, observer) => {
-      if(entries[0].isIntersecting && this.page < this.totalPages) {
-        this.loadMorePosts()
-      }
-    }
-
-    const observer = new IntersectionObserver(callback, options)
-    observer.observe(this.$refs.observer)
   },
   computed: {
     sortedPost() {
@@ -153,6 +139,10 @@ export default {
 
 .app-search {
   margin-bottom: 1rem;
+}
+
+.observer {
+  height: 1px;
 }
 
 .page-wrapper {

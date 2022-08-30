@@ -39,7 +39,7 @@ import PostList from "@/components/PostList";
 import axios from "axios";
 
 export default {
-  name: "posts-page",
+  name: "post-page",
   components: {
     PostForm,
     PostList,

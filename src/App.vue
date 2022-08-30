@@ -1,15 +1,16 @@
 <template>
   <div class="app">
-    <posts-page/>
+    <navbar/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import PostsPage from "@/pages/PostsPage";
 
+import Navbar from "@/components/Navbar";
 export default {
   name: "App",
-  components: {PostsPage},
+  components: {Navbar},
 }
 </script>
 

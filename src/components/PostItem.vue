@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <div>
-      <h3 class="post-title">{{ post.title }}</h3>
+      <h3 class="post-title">{{ post.id }}. {{ post.title }}</h3>
       <p class="post-body">{{ post.body }}</p>
     </div>
     <custom-button class="post-remove" @click="$emit('remove', post)">&times;</custom-button>

@@ -1,6 +1,6 @@
 <template>
   <div v-if="posts.length > 0">
-    <h3>Post List</h3>
+    <h2>Post List</h2>
     <transition-group name="post-list">
       <post-item
         v-for="post in posts"

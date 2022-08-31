@@ -84,7 +84,7 @@ export default {
         this.totalPages = Math.ceil(response.headers['x-total-count'] / this.limit)
         this.posts = response.data
       } catch (e) {
-        alert('Error')
+        console.log(e)
       } finally {
         this.isPostsLoading = false
       }
@@ -101,7 +101,7 @@ export default {
         this.totalPages = Math.ceil(response.headers['x-total-count'] / this.limit)
         this.posts = [...this.posts, ...response.data]
       } catch (e) {
-        alert('Error')
+        console.log(e)
       }
     },
     // changePage(pageNumber) {

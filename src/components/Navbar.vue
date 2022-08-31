@@ -6,6 +6,7 @@
     <div>
       <custom-button class="navbar-btn" @click="$router.push('/about')">About</custom-button>
       <custom-button class="navbar-btn" @click="$router.push('/posts')">Posts</custom-button>
+      <custom-button class="navbar-btn" @click="$router.push('/store')">Store</custom-button>
     </div>
   </div>
 </template>
